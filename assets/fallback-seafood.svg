@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dff5ff"/><stop offset="1" stop-color="#f7fbff"/></linearGradient>
+    <linearGradient id="fish" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#174f8f"/><stop offset=".55" stop-color="#2b86c5"/><stop offset="1" stop-color="#8fd7ef"/></linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <path d="M260 405c155-165 420-205 630-30l150-118-18 177 18 177-150-118c-210 175-475 135-630-30-42-45-42-13 0-58z" fill="url(#fish)" opacity=".96"/>
+  <circle cx="393" cy="382" r="18" fill="#fff"/><circle cx="393" cy="382" r="8" fill="#12304c"/>
+  <path d="M462 490c145 52 284 40 411-42" fill="none" stroke="#d8f5ff" stroke-width="15" stroke-linecap="round" opacity=".8"/>
+  <text x="600" y="690" text-anchor="middle" font-family="sans-serif" font-size="44" font-weight="700" fill="#164b78">대표 수산물 이미지 준비 중</text>
+</svg>

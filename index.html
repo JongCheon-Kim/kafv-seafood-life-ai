@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#075fab" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>KAFV 수산생활정보 AI</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/icon-192.png" alt="KAFV" class="brand-logo" />
+        <div><strong>KAFV 수산생활정보 AI</strong><small>가격 · 지식 · 시장 · 맛집 · 문화</small></div>
+      </div>
+      <button class="icon-btn" id="installBtn" hidden aria-label="앱 설치">＋</button>
+    </header>
+
+    <main id="mainScroll" class="main-scroll">
+      <section id="homeView" class="view active">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">AI-native 수산생활정보 플랫폼</span>
+            <h1>가격을 보고,<br><em>수산물을 이해하고</em><br>지역을 경험합니다.</h1>
+            <p>검증된 KAFV 가격·사전·TourAPI 엔진을 한 번의 검색으로 연결합니다.</p>
+          </div>
+          <div class="hero-wave" aria-hidden="true"><span>🐟</span></div>
+        </div>
+
+        <div class="search-panel">
+          <label for="itemInput">수산물 통합검색</label>
+          <div class="search-row">
+            <input id="itemInput" type="search" value="고등어" placeholder="예: 고등어, 연어, 전복" autocomplete="off" />
+            <button id="searchBtn" class="primary-btn">통합조회</button>
+          </div>
+          <div class="location-row">
+            <button id="locationBtn" class="secondary-btn">◎ 현재 위치 사용</button>
+            <span id="locationText">위치 미사용 · 가격/사전은 바로 조회 가능</span>
+          </div>
+        </div>
+
+        <div class="hub-grid" id="hubGrid">
+          <button data-section="price" class="hub-card blue"><span>₩</span><b>가격정보</b><small>현재가·추세·시장</small></button>
+          <button data-section="encyclopedia" class="hub-card teal"><span>🐟</span><b>수산물사전</b><small>제철·영양·조리</small></button>
+          <button data-section="market" class="hub-card orange"><span>🧺</span><b>시장</b><small>전통·재래·수산시장</small></button>
+          <button data-section="restaurant" class="hub-card red"><span>🍽</span><b>맛집</b><small>주변 음식점</small></button>
+          <button data-section="culture" class="hub-card violet wide"><span>🏛</span><b>문화</b><small>문화시설·지역경험</small></button>
+        </div>
+
+        <div class="journey-card">
+          <strong>오늘의 수산생활 여정</strong>
+          <div><span>가격 확인</span><i>→</i><span>수산물 이해</span><i>→</i><span>시장</span><i>→</i><span>맛집</span><i>→</i><span>문화</span></div>
+        </div>
+      </section>
+
+      <section id="resultView" class="view">
+        <div class="result-head">
+          <div><span class="eyebrow">통합검색 결과</span><h2 id="resultTitle">수산물 정보</h2></div>
+          <button id="backHomeBtn" class="secondary-btn compact">← 홈</button>
+        </div>
+        <div id="statusStrip" class="status-strip"></div>
+        <nav id="sectionTabs" class="section-tabs" aria-label="기능 탭">
+          <button data-section="price">가격정보</button>
+          <button data-section="encyclopedia">수산물사전</button>
+          <button data-section="market">시장</button>
+          <button data-section="restaurant">맛집</button>
+          <button data-section="culture">문화</button>
+        </nav>
+        <div id="sectionContent" class="section-content"></div>
+      </section>
+
+      <section id="recentView" class="view utility-view"><h2>최근기록</h2><div id="recentList"></div></section>
+      <section id="favoriteView" class="view utility-view"><h2>즐겨찾기</h2><div id="favoriteList"></div></section>
+      <section id="myView" class="view utility-view">
+        <h2>마이페이지</h2>
+        <div class="settings-card"><b>KAFV 수산생활정보 AI</b><p>가격정보·수산물사전·시장·맛집·문화정보를 하나의 사용자 여정으로 연결합니다.</p><small id="appVersion"></small></div>
+        <div class="settings-card"><b>데이터 원칙</b><p>자료 없음, 미확인, API 오류를 구분하며 원자료에 없는 값은 임의 생성하지 않습니다.</p></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button data-nav="home" class="active"><span>⌂</span><small>홈</small></button>
+      <button data-nav="recent"><span>◷</span><small>최근기록</small></button>
+      <button data-nav="favorite"><span>♡</span><small>즐겨찾기</small></button>
+      <button data-nav="my"><span>◉</span><small>마이페이지</small></button>
+    </nav>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

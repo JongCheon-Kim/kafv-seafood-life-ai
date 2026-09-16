@@ -1,0 +1,14 @@
+{
+  "name": "KAFV 수산생활정보 AI",
+  "short_name": "수산생활AI",
+  "description": "가격·수산물사전·시장·맛집·문화를 하나의 흐름으로 연결하는 KAFV 수산생활정보 AI",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#eef6fb",
+  "theme_color": "#075fab",
+  "lang": "ko-KR",
+  "icons": [
+    {"src":"assets/icon-192.png","sizes":"192x192","type":"image/png"},
+    {"src":"assets/icon-512.png","sizes":"512x512","type":"image/png"}
+  ]
+}
